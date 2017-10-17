@@ -1,0 +1,733 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:StarJar-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L USB_A J1
+U 1 1 59AEDE0D
+P 850 1150
+F 0 "J1" H 650 1600 50  0000 L CNN
+F 1 "USB_A" H 650 1500 50  0000 L CNN
+F 2 "Connectors:USB_A" H 1000 1100 50  0001 C CNN
+F 3 "Wurth MFGPN: 61400416021" H 1000 1100 50  0001 C CNN
+	1    850  1150
+	1    0    0    -1  
+$EndComp
+Text Notes 7350 7500 0    60   ~ 0
+StarJar Radiation Detector
+Text Notes 8200 7650 0    60   ~ 0
+Fall 2017
+Text Notes 10600 7600 0    60   ~ 0
+-
+$Comp
+L LM555N U1
+U 1 1 59AEDE9D
+P 2150 4100
+F 0 "U1" H 1750 4450 50  0000 L CNN
+F 1 "LM555N" H 1750 3750 50  0000 L CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm_Socket" H 2150 4100 50  0001 C CNN
+F 3 "" H 2150 4100 50  0001 C CNN
+	1    2150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_1x02 J3
+U 1 1 59AEDFCE
+P 10000 3300
+F 0 "J3" H 10000 3550 50  0000 C TNN
+F 1 "Screw_Terminal_1x02" H 9700 3100 50  0000 C TNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10000 3075 50  0001 C CNN
+F 3 "" H 9975 3300 50  0001 C CNN
+	1    10000 3300
+	-1   0    0    1   
+$EndComp
+Text Notes 5750 3350 0    60   ~ 0
+Geiger tube inputs
+$Comp
+L +5V #PWR1
+U 1 1 59AEE24D
+P 1350 950
+F 0 "#PWR1" H 1350 800 50  0001 C CNN
+F 1 "+5V" H 1350 1090 50  0000 C CNN
+F 2 "" H 1350 950 50  0001 C CNN
+F 3 "" H 1350 950 50  0001 C CNN
+	1    1350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR3
+U 1 1 59AEE26B
+P 2150 2950
+F 0 "#PWR3" H 2150 2800 50  0001 C CNN
+F 1 "+5V" H 2150 3090 50  0000 C CNN
+F 2 "" H 2150 2950 50  0001 C CNN
+F 3 "" H 2150 2950 50  0001 C CNN
+	1    2150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR6
+U 1 1 59AEE280
+P 2150 5100
+F 0 "#PWR6" H 2150 4850 50  0001 C CNN
+F 1 "GND" H 2150 4950 50  0000 C CNN
+F 2 "" H 2150 5100 50  0001 C CNN
+F 3 "" H 2150 5100 50  0001 C CNN
+	1    2150 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 59AEE29E
+P 850 1800
+F 0 "#PWR2" H 850 1550 50  0001 C CNN
+F 1 "GND" H 850 1650 50  0000 C CNN
+F 2 "" H 850 1800 50  0001 C CNN
+F 3 "" H 850 1800 50  0001 C CNN
+	1    850  1800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1150 1150
+NoConn ~ 1150 1250
+NoConn ~ 1650 4100
+$Comp
+L R R8
+U 1 1 59AEEE10
+P 1450 4850
+F 0 "R8" V 1530 4850 50  0000 C CNN
+F 1 "220k" V 1450 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 1380 4850 50  0001 C CNN
+F 3 "" H 1450 4850 50  0001 C CNN
+	1    1450 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 59AEEED4
+P 1050 4850
+F 0 "C2" H 1075 4950 50  0000 L CNN
+F 1 "1n" H 1075 4750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 1088 4700 50  0001 C CNN
+F 3 "" H 1050 4850 50  0001 C CNN
+	1    1050 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D2
+U 1 1 59AEEF4A
+P 1050 4350
+F 0 "D2" H 1050 4450 50  0000 C CNN
+F 1 "1N914" H 1050 4250 50  0000 C CNN
+F 2 "Diodes_THT:D_DO-41_SOD81_P12.70mm_Horizontal" H 1050 4350 50  0001 C CNN
+F 3 "" H 1050 4350 50  0001 C CNN
+	1    1050 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R5
+U 1 1 59AEEFED
+P 1050 3900
+F 0 "R5" V 1130 3900 50  0000 C CNN
+F 1 "1k" V 1050 3900 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 980 3900 50  0001 C CNN
+F 3 "" H 1050 3900 50  0001 C CNN
+	1    1050 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 59AEF0DC
+P 3150 3750
+F 0 "R4" V 3230 3750 50  0000 C CNN
+F 1 "330" V 3150 3750 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 3080 3750 50  0001 C CNN
+F 3 "" H 3150 3750 50  0001 C CNN
+	1    3150 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R1
+U 1 1 59AEF6A6
+P 3500 3100
+F 0 "R1" V 3580 3100 50  0000 C CNN
+F 1 "100k" V 3500 3100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 3430 3100 50  0001 C CNN
+F 3 "" H 3500 3100 50  0001 C CNN
+	1    3500 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L L L1
+U 1 1 59AEF7AD
+P 4050 3150
+F 0 "L1" V 4000 3150 50  0000 C CNN
+F 1 "10mH" V 4125 3150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" H 4050 3150 50  0001 C CNN
+F 3 "" H 4050 3150 50  0001 C CNN
+	1    4050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NPN_BCE Q2
+U 1 1 59AEF8BE
+P 3600 4500
+F 0 "Q2" H 3800 4550 50  0000 L CNN
+F 1 "2N3904" H 3800 4450 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 3800 4600 50  0001 C CNN
+F 3 "" H 3600 4500 50  0001 C CNN
+	1    3600 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 59AF03EF
+P 4050 4750
+F 0 "R7" V 4130 4750 50  0000 C CNN
+F 1 "15" V 4050 4750 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 3980 4750 50  0001 C CNN
+F 3 "" H 4050 4750 50  0001 C CNN
+	1    4050 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L POT RV2
+U 1 1 59AF0478
+P 4050 5150
+F 0 "RV2" V 3875 5150 50  0000 C CNN
+F 1 "10Ω POT" V 3950 5150 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Suntan_TSR-3386P_Horizontal" H 4050 5150 50  0001 C CNN
+F 3 "" H 4050 5150 50  0001 C CNN
+	1    4050 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR10
+U 1 1 59AF059B
+P 4200 5500
+F 0 "#PWR10" H 4200 5250 50  0001 C CNN
+F 1 "GND" H 4200 5350 50  0000 C CNN
+F 2 "" H 4200 5500 50  0001 C CNN
+F 3 "" H 4200 5500 50  0001 C CNN
+	1    4200 5500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4050 5300
+$Comp
+L D D1
+U 1 1 59AF15FF
+P 4950 3500
+F 0 "D1" H 4950 3600 50  0000 C CNN
+F 1 "1N4937" H 4950 3400 50  0000 C CNN
+F 2 "Diodes_THT:D_DO-41_SOD81_P12.70mm_Horizontal" H 4950 3500 50  0001 C CNN
+F 3 "" H 4950 3500 50  0001 C CNN
+	1    4950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C1
+U 1 1 59AF1EF4
+P 5250 4650
+F 0 "C1" H 5275 4750 50  0000 L CNN
+F 1 "10n" H 5275 4550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 5288 4500 50  0001 C CNN
+F 3 "" H 5250 4650 50  0001 C CNN
+F 4 "1kV" H 5450 4450 60  0000 R BNN "Voltage"
+	1    5250 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 950  1350 950 
+Wire Wire Line
+	750  1550 750  1750
+Wire Wire Line
+	750  1750 850  1750
+Wire Wire Line
+	850  1550 850  1800
+Wire Wire Line
+	2150 2950 2150 3700
+Wire Wire Line
+	2150 4500 2150 5100
+Wire Wire Line
+	1050 5000 3500 5000
+Connection ~ 2150 5000
+Wire Wire Line
+	2650 3900 2800 3900
+Wire Wire Line
+	2800 3900 2800 3300
+Wire Wire Line
+	1050 3300 3150 3300
+Wire Wire Line
+	1050 3300 1050 3750
+Wire Wire Line
+	1050 4050 1050 4200
+Wire Wire Line
+	1050 4500 1050 4700
+Connection ~ 1450 5000
+Wire Wire Line
+	2650 4100 3150 4100
+Wire Wire Line
+	3150 4100 3150 3900
+Wire Wire Line
+	3150 3300 3150 3600
+Connection ~ 2800 3300
+Wire Wire Line
+	1450 4700 1450 3900
+Wire Wire Line
+	1450 3900 1650 3900
+Wire Wire Line
+	1450 4550 1050 4550
+Connection ~ 1050 4550
+Connection ~ 1450 4550
+Wire Wire Line
+	2650 4300 2650 4600
+Wire Wire Line
+	2650 4600 2150 4600
+Connection ~ 2150 4600
+Wire Wire Line
+	1650 4300 1550 4300
+Wire Wire Line
+	1550 4300 1550 3500
+Wire Wire Line
+	1550 3500 3500 3500
+Wire Wire Line
+	3500 3250 3500 4300
+Wire Wire Line
+	2150 2950 4050 2950
+Wire Wire Line
+	4050 2950 4050 3000
+Connection ~ 3500 2950
+Connection ~ 3500 3500
+Wire Wire Line
+	3500 5000 3500 4700
+Wire Wire Line
+	3150 3900 3750 3900
+Wire Wire Line
+	4050 4100 4050 4600
+Wire Wire Line
+	4050 4500 3800 4500
+Wire Wire Line
+	4050 3700 4050 3300
+Connection ~ 4050 4500
+Wire Wire Line
+	4050 4900 4050 5000
+Wire Wire Line
+	4200 5150 4200 5500
+Wire Wire Line
+	4800 3500 4050 3500
+Connection ~ 4050 3500
+Wire Wire Line
+	5100 3500 5350 3500
+Wire Wire Line
+	5250 3500 5250 4500
+Wire Wire Line
+	5250 5400 5250 4800
+Connection ~ 4200 5400
+$Comp
+L R R3
+U 1 1 59AF2801
+P 5500 3500
+F 0 "R3" V 5580 3500 50  0000 C CNN
+F 1 "4.7M" V 5500 3500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 5430 3500 50  0001 C CNN
+F 3 "" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5250 3500
+Wire Wire Line
+	5650 3500 5900 3500
+$Comp
+L C C3
+U 1 1 59AF3982
+P 6600 5000
+F 0 "C3" H 6625 5100 50  0000 L CNN
+F 1 "220pF" H 6625 4900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 6638 4850 50  0001 C CNN
+F 3 "" H 6600 5000 50  0001 C CNN
+F 4 "1kV" H 6800 4850 60  0000 R TNN "Voltage"
+	1    6600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 59AF3B47
+P 7050 4100
+F 0 "R6" V 7130 4100 50  0000 C CNN
+F 1 "22k" V 7050 4100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 6980 4100 50  0001 C CNN
+F 3 "" H 7050 4100 50  0001 C CNN
+	1    7050 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6300 3500 7050 3500
+Wire Wire Line
+	6600 3500 6600 4850
+Wire Wire Line
+	7050 3500 7050 3950
+Connection ~ 6600 3500
+$Comp
+L GND #PWR7
+U 1 1 59AF52EC
+P 7600 5450
+F 0 "#PWR7" H 7600 5200 50  0001 C CNN
+F 1 "GND" H 7600 5300 50  0000 C CNN
+F 2 "" H 7600 5450 50  0001 C CNN
+F 3 "" H 7600 5450 50  0001 C CNN
+	1    7600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5150 6600 5400
+Connection ~ 7600 5400
+Text Label 7700 4800 0    60   ~ 0
+PulseOutput
+Wire Wire Line
+	4200 5400 5250 5400
+Text Notes 5350 3800 0    60   ~ 0
+400V
+$Comp
+L C C4
+U 1 1 59B055F4
+P 8050 5000
+F 0 "C4" H 8075 5100 50  0000 L CNN
+F 1 "20uF" H 8075 4900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 8088 4850 50  0001 C CNN
+F 3 "" H 8050 5000 50  0001 C CNN
+	1    8050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV1
+U 1 1 59B05BB6
+P 7600 4950
+F 0 "RV1" V 7425 4950 50  0000 C CNN
+F 1 ">100k POT" V 7500 4950 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Suntan_TSR-3386P_Horizontal" H 7600 4950 50  0001 C CNN
+F 3 "" H 7600 4950 50  0001 C CNN
+	1    7600 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR9
+U 1 1 59B08F92
+P 9850 5450
+F 0 "#PWR9" H 9850 5200 50  0001 C CNN
+F 1 "GND" H 9850 5300 50  0000 C CNN
+F 2 "" H 9850 5450 50  0001 C CNN
+F 3 "" H 9850 5450 50  0001 C CNN
+	1    9850 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 3400 9800 3400
+Text Notes 10150 3300 0    60   ~ 0
+To Lights
+Connection ~ 850  1750
+$Comp
+L TEST_2P J2
+U 1 1 59B0A442
+P 6100 3500
+F 0 "J2" H 6100 3560 50  0000 C CNN
+F 1 "GM_Tube" H 6100 3430 50  0000 C CNN
+F 2 "Wire_Connections_Bridges:WireConnection_1.50mmDrill" H 6100 3500 50  0001 C CNN
+F 3 "" H 6100 3500 50  0001 C CNN
+	1    6100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3200 9800 3200
+$Comp
+L CONN_01X01_FEMALE FuseHolder1
+U 1 1 59B9727A
+P 5300 1550
+F 0 "FuseHolder1" H 5300 1650 50  0000 C CNN
+F 1 "FuseHolder" H 5300 1450 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 5300 1550 50  0001 C CNN
+F 3 "" H 5300 1550 50  0001 C CNN
+	1    5300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01_FEMALE FuseHolder2
+U 1 1 59B978C3
+P 5300 1950
+F 0 "FuseHolder2" H 5300 2050 50  0000 C CNN
+F 1 "FuseHolder" H 5300 1850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 5300 1950 50  0001 C CNN
+F 3 "" H 5300 1950 50  0001 C CNN
+	1    5300 1950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5200 1550
+NoConn ~ 5200 1950
+Text Notes 4400 1250 0    60   ~ 0
+Each fuse holder uses a 15mm spacing \nresistor footprint for mounting holes
+Wire Wire Line
+	7750 5400 7750 4950
+Connection ~ 7750 5400
+Wire Wire Line
+	7600 5450 7600 5400
+NoConn ~ 7600 5100
+Wire Wire Line
+	8050 4800 8050 4850
+Connection ~ 8050 4800
+Wire Wire Line
+	8050 5400 8050 5150
+Connection ~ 8050 5400
+Wire Wire Line
+	6600 5400 8050 5400
+$Comp
+L +5V #PWR4
+U 1 1 59B99BA7
+P 7600 3200
+F 0 "#PWR4" H 7600 3050 50  0001 C CNN
+F 1 "+5V" H 7600 3340 50  0000 C CNN
+F 2 "" H 7600 3200 50  0001 C CNN
+F 3 "" H 7600 3200 50  0001 C CNN
+	1    7600 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 4150 4900 0    60   ~ 0
+Works well without R7
+$Comp
+L Q_NPN_BCE Q4
+U 1 1 59C04EE4
+P 7500 4350
+F 0 "Q4" H 7700 4400 50  0000 L CNN
+F 1 "2N3904" H 7700 4300 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 7700 4450 50  0001 C CNN
+F 3 "" H 7500 4350 50  0001 C CNN
+	1    7500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 59C0508E
+P 7050 4700
+F 0 "R9" V 7130 4700 50  0000 C CNN
+F 1 "100k" V 7050 4700 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 6980 4700 50  0001 C CNN
+F 3 "" H 7050 4700 50  0001 C CNN
+	1    7050 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 4850 7050 5400
+Connection ~ 7050 5400
+Wire Wire Line
+	7050 4550 7050 4250
+Wire Wire Line
+	7300 4350 7050 4350
+Connection ~ 7050 4350
+Wire Wire Line
+	7600 4150 7600 3200
+Wire Wire Line
+	7600 4800 7600 4550
+$Comp
+L Q_NPN_ECB Q1
+U 1 1 59C05FBF
+P 3950 3900
+F 0 "Q1" H 4150 3950 50  0000 L CNN
+F 1 "JN3303" H 4150 3850 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 4150 4000 50  0001 C CNN
+F 3 "" H 3950 3900 50  0001 C CNN
+	1    3950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 59C16D42
+P 9450 3750
+F 0 "#PWR5" H 9450 3500 50  0001 C CNN
+F 1 "GND" H 9450 3600 50  0000 C CNN
+F 2 "" H 9450 3750 50  0001 C CNN
+F 3 "" H 9450 3750 50  0001 C CNN
+	1    9450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3750 9450 3650
+Wire Wire Line
+	9450 3350 9450 3200
+Connection ~ 9450 3200
+$Comp
+L GND #PWR12
+U 1 1 59C172D0
+P 1350 6250
+F 0 "#PWR12" H 1350 6000 50  0001 C CNN
+F 1 "GND" H 1350 6100 50  0000 C CNN
+F 2 "" H 1350 6250 50  0001 C CNN
+F 3 "" H 1350 6250 50  0001 C CNN
+	1    1350 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR11
+U 1 1 59C17371
+P 1350 5650
+F 0 "#PWR11" H 1350 5500 50  0001 C CNN
+F 1 "+5V" H 1350 5790 50  0000 C CNN
+F 2 "" H 1350 5650 50  0001 C CNN
+F 3 "" H 1350 5650 50  0001 C CNN
+	1    1350 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5650 1350 5800
+Wire Wire Line
+	1350 6100 1350 6250
+Text Notes 1700 6000 0    60   ~ 0
+Place near 555 timer
+$Comp
+L C C5
+U 1 1 59C17D8A
+P 9450 3500
+F 0 "C5" H 9475 3600 50  0000 L CNN
+F 1 "20uF" H 9475 3400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 9488 3350 50  0001 C CNN
+F 3 "" H 9450 3500 50  0001 C CNN
+	1    9450 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 59C1809C
+P 1350 5950
+F 0 "C6" H 1375 6050 50  0000 L CNN
+F 1 "1uF" H 1375 5850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 1388 5800 50  0001 C CNN
+F 3 "" H 1350 5950 50  0001 C CNN
+	1    1350 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4800 7600 4800
+$Comp
+L LMV321 U2
+U 1 1 59E5209A
+P 8850 4300
+F 0 "U2" H 8850 4500 50  0000 L CNN
+F 1 "LMV321" H 8850 4100 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 8850 4425 50  0001 L CNN
+F 3 "" H 8850 4300 50  0001 C CNN
+	1    8850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 59E53532
+P 9700 4850
+F 0 "R2" V 9780 4850 50  0000 C CNN
+F 1 "15" V 9700 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 9630 4850 50  0001 C CNN
+F 3 "" H 9700 4850 50  0001 C CNN
+	1    9700 4850
+	-1   0    0    1   
+$EndComp
+$Comp
+L POT RV3
+U 1 1 59E53674
+P 9700 5250
+F 0 "RV3" V 9525 5250 50  0000 C CNN
+F 1 "10Ω POT" V 9600 5250 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Suntan_TSR-3386P_Horizontal" H 9700 5250 50  0001 C CNN
+F 3 "" H 9700 5250 50  0001 C CNN
+	1    9700 5250
+	1    0    0    -1  
+$EndComp
+Text Notes 3250 5950 0    60   ~ 0
+Adjust RV2 first to make sure HV < 600V BEFORE putting in GM tube
+Text Notes 3250 6100 0    60   ~ 0
+GM tube is damaged by >600V!
+NoConn ~ 9700 5400
+Wire Wire Line
+	8350 4200 8350 4800
+$Comp
+L GND #PWR8
+U 1 1 59E556E2
+P 8750 5450
+F 0 "#PWR8" H 8750 5200 50  0001 C CNN
+F 1 "GND" H 8750 5300 50  0000 C CNN
+F 2 "" H 8750 5450 50  0001 C CNN
+F 3 "" H 8750 5450 50  0001 C CNN
+	1    8750 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8750 3200
+$Comp
+L Q_NPN_BCE Q3
+U 1 1 59E55E4A
+P 9600 4300
+F 0 "Q3" H 9800 4350 50  0000 L CNN
+F 1 "2N3904" H 9800 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 9800 4400 50  0001 C CNN
+F 3 "" H 9600 4300 50  0001 C CNN
+	1    9600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4200 8550 4200
+Wire Wire Line
+	8750 4600 8750 5450
+Wire Wire Line
+	8750 4000 8750 3200
+Wire Wire Line
+	9150 4300 9400 4300
+Wire Wire Line
+	9700 4100 9700 3400
+Wire Wire Line
+	9700 4500 9700 4700
+Wire Wire Line
+	8550 4400 8500 4400
+Wire Wire Line
+	8500 4400 8500 4600
+Wire Wire Line
+	8500 4600 9700 4600
+Wire Wire Line
+	9850 5450 9850 5250
+Connection ~ 9700 4600
+Wire Wire Line
+	9700 5000 9700 5100
+$EndSCHEMATC
