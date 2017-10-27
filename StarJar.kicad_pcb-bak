@@ -15,7 +15,7 @@
   (page USLetter)
   (layers
     (0 F.Cu signal)
-    (31 B.Cu signal hide)
+    (31 B.Cu signal)
     (33 F.Adhes user hide)
     (35 F.Paste user hide)
     (37 F.SilkS user)
@@ -1894,6 +1894,9 @@
       (xy 0.500964 -3.601424)) (layer F.SilkS) (width 0.01))
   )
 
+  (gr_text "K'NEK-TEK Star Jar v1.1\nOct 2017" (at 157.734 72.136) (layer F.Fab)
+    (effects (font (size 1.3 1.3) (thickness 0.127)))
+  )
   (gr_text "LED Current Limiting" (at 166.878 91.694) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.127)))
   )
@@ -1961,9 +1964,6 @@
   )
   (gr_text + (at 186.944 74.422) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
-  (gr_text "K'NEK-TEK Star Jar v1.0\nSept 2017" (at 167.64 101.6) (layer F.Fab)
-    (effects (font (size 1.016 1.016) (thickness 0.127)))
   )
   (gr_text 1.0 (at 253.492 198.882) (layer F.Fab)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
